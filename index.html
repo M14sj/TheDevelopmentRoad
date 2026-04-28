@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheDevelopmentRoad.com - Strategic Digital Asset</title>
+    
+    <!-- Tailwind CSS (CDN for standalone HTML) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts for Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #060913;
+            color: #e5e7eb;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom Selection Color */
+        ::selection {
+            background-color: rgba(234, 179, 8, 0.3);
+            color: #fef08a;
+        }
+    </style>
+</head>
+<body class="min-h-screen selection:bg-yellow-500/30 selection:text-yellow-200 overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-serif tracking-wider text-white">
+                    STRATEGIC ASSETS<span class="text-yellow-500">.</span>
+                </div>
+                
+                <!-- Desktop Link -->
+                <a href="#acquire" class="hidden md:block text-sm font-medium tracking-widest uppercase text-yellow-500 hover:text-yellow-400 transition-colors">
+                    Make an Offer
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="block md:hidden text-yellow-500 hover:text-yellow-400 transition-colors focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 w-full bg-[#060913]/95 backdrop-blur-xl border-y border-white/10 shadow-2xl flex-col px-6 py-6 transition-all">
+            <a href="#acquire" class="mobile-link text-sm font-medium tracking-widest uppercase text-yellow-500 hover:text-yellow-400 transition-colors self-end">
+                Make an Offer
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        
+        <!-- Abstract Background Lighting -->
+        <div class="absolute top-1/4 left-1/4 w-[20rem] h-[20rem] md:w-[40rem] md:h-[40rem] bg-yellow-600/10 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-[15rem] h-[15rem] md:w-[30rem] md:h-[30rem] bg-blue-900/15 rounded-full blur-[100px] md:blur-[150px] pointer-events-none"></div>
+
+        <!-- Abstract SVG Map Path -->
+        <div class="absolute inset-0 z-0 opacity-30 flex items-center justify-center pointer-events-none">
+            <svg class="w-full h-full max-w-4xl opacity-50" viewBox="0 0 400 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M200 750 C 250 600, 100 500, 150 350 C 200 200, 150 100, 250 50" stroke="url(#paint0_linear)" stroke-width="2" stroke-dasharray="4 4" />
+                <circle cx="200" cy="750" r="6" fill="#EAB308" class="animate-pulse" />
+                <circle cx="250" cy="50" r="6" fill="#EAB308" class="animate-pulse" />
+                <defs>
+                    <linearGradient id="paint0_linear" x1="200" y1="750" x2="250" y2="50" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#EAB308" stop-opacity="0" />
+                        <stop offset="0.5" stop-color="#EAB308" />
+                        <stop offset="1" stop-color="#EAB308" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+
+        <!-- Hero Glassmorphism Card -->
+        <div class="relative z-10 w-full max-w-4xl px-4 mt-12 md:mt-0">
+            <div class="bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-3xl p-6 sm:p-10 md:p-14 shadow-[0_0_50px_rgba(0,0,0,0.5)] w-full">
+                
+                <div class="mb-8">
+                    <p class="text-yellow-500/90 text-xs md:text-sm tracking-[0.25em] uppercase font-semibold mb-3">
+                        Premium Digital Asset
+                    </p>
+                    <div class="flex items-center justify-between gap-3 md:gap-4 w-full">
+                        <h1 class="text-[5.5vw] sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif text-white tracking-tight leading-tight whitespace-nowrap">
+                            TheDevelopmentRoad<span class="text-yellow-500">.com</span>
+                        </h1>
+                        <i data-lucide="shield-check" class="text-yellow-500 w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 opacity-80 shrink-0"></i>
+                    </div>
+                </div>
+
+                <p class="text-gray-400 text-base md:text-xl mb-12 leading-relaxed max-w-2xl font-light">
+                    The definitive digital gateway for the Middle East's largest infrastructure and logistics corridor. Position your enterprise at the forefront of global trade.
+                </p>
+
+                <!-- Domain Status Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-6 mb-12">
+                    <div class="bg-gradient-to-b from-yellow-500/10 to-transparent border border-yellow-500/40 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-yellow-500/5 group-hover:bg-yellow-500/10 transition-colors"></div>
+                        <span class="text-white font-semibold text-xl md:text-2xl relative z-10">.com</span>
+                        <span class="text-yellow-400 text-xs md:text-sm mt-2 relative z-10 font-medium flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-yellow-400 animate-ping absolute"></span>
+                            <span class="w-2 h-2 rounded-full bg-yellow-400"></span>
+                            Available
+                        </span>
+                    </div>
+                    
+                    <div class="bg-black/40 border border-white/5 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center opacity-50">
+                        <span class="text-gray-400 font-semibold text-xl md:text-2xl">.net</span>
+                        <div class="flex items-center gap-1 mt-2 text-gray-500 text-xs md:text-sm">
+                            <i data-lucide="lock" class="w-3 h-3 md:w-4 md:h-4"></i> Taken
+                        </div>
+                    </div>
+
+                    <div class="bg-black/40 border border-white/5 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center opacity-50">
+                        <span class="text-gray-400 font-semibold text-xl md:text-2xl">.org</span>
+                        <div class="flex items-center gap-1 mt-2 text-gray-500 text-xs md:text-sm">
+                            <i data-lucide="lock" class="w-3 h-3 md:w-4 md:h-4"></i> Taken
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#acquire" class="flex-1 group relative px-8 py-4 bg-transparent overflow-hidden rounded-xl border border-yellow-500/50 transition-all hover:border-yellow-400 hover:shadow-[0_0_30px_rgba(234,179,8,0.15)] text-center flex justify-center items-center gap-3">
+                        <div class="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-transparent transition-transform group-hover:translate-x-full"></div>
+                        <span class="relative text-yellow-500 font-medium tracking-wide">
+                            Acquire This Domain
+                        </span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 md:w-5 md:h-5 relative text-yellow-500 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce hidden md:flex">
+            <span class="text-xs tracking-widest uppercase text-gray-400">Scroll</span>
+            <i data-lucide="chevron-down" class="text-gray-400 w-5 h-5"></i>
+        </div>
+    </section>
+
+    <!-- Strategic Value Section -->
+    <section class="py-24 md:py-32 relative z-10 border-t border-white/5 bg-[#0a0f18]/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 md:mb-20">
+                <h2 class="text-3xl md:text-4xl font-serif text-white mb-4">A Multi-Billion Dollar Vision</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">Owning this domain aligns your brand with one of the most critical geopolitical and economic infrastructure projects of the 21st century.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8 hover:bg-white/[0.04] hover:border-white/10 transition-all group">
+                    <div class="bg-[#0a0f18] w-14 h-14 md:w-16 md:h-16 rounded-xl border border-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="anchor" class="w-7 h-7 md:w-8 md:h-8 text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-serif text-white mb-3">Global Connectivity</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        The Development Road connects the Grand Faw Port to Europe, creating a new silk road for global trade and logistics.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8 hover:bg-white/[0.04] hover:border-white/10 transition-all group">
+                    <div class="bg-[#0a0f18] w-14 h-14 md:w-16 md:h-16 rounded-xl border border-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="trending-up" class="w-7 h-7 md:w-8 md:h-8 text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-serif text-white mb-3">Economic Epicenter</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        A $17 billion infrastructure project encompassing high-speed rail, highways, and industrial hubs across the region.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white/[0.02] border border-white/5 rounded-2xl p-6 md:p-8 hover:bg-white/[0.04] hover:border-white/10 transition-all group">
+                    <div class="bg-[#0a0f18] w-14 h-14 md:w-16 md:h-16 rounded-xl border border-white/5 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                        <i data-lucide="globe" class="w-7 h-7 md:w-8 md:h-8 text-yellow-500"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-serif text-white mb-3">Digital Monopoly</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        With alternative extensions secured by others, the .com domain offers unparalleled authority and exclusive brand positioning.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acquisition Section -->
+    <section id="acquire" class="py-24 md:py-32 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 md:px-6">
+            <div class="bg-gradient-to-br from-[#0e1424] to-[#060913] border border-white/10 rounded-3xl p-6 md:p-16 relative overflow-hidden">
+                
+                <!-- Background Glow -->
+                <div class="absolute top-0 right-0 w-40 h-40 md:w-64 md:h-64 bg-yellow-600/5 rounded-full blur-[60px] md:blur-[80px] pointer-events-none"></div>
+
+                <div class="relative z-10 text-center mb-10 md:mb-12">
+                    <i data-lucide="shield-check" class="w-10 h-10 md:w-12 md:h-12 text-yellow-500 mx-auto mb-4 md:mb-6 opacity-90"></i>
+                    <h2 class="text-2xl md:text-4xl font-serif text-white mb-4">Secure This Asset</h2>
+                    <p class="text-gray-400 text-sm md:text-base">All inquiries are handled with strict confidentiality. Submit your information to receive the strategic prospectus and transfer details.</p>
+                </div>
+
+                <form id="acquisitionForm" class="space-y-6 max-w-2xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Contact Name *</label>
+                            <input type="text" name="contactName" id="contactName" required class="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-yellow-500/50" placeholder="John Doe" />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Email *</label>
+                            <input type="email" name="email" id="email" required class="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-yellow-500/50" placeholder="director@company.com" />
+                        </div>
+                    </div>
+                
+                    <div>
+                        <label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Proposed Offer *</label>
+                        <input type="text" name="offer" id="offer" required class="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-yellow-500/50" placeholder="e.g. $100,000" />
+                    </div>
+                
+                    <div>
+                        <label class="block text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Message <span class="text-gray-600 normal-case">(Optional)</span></label>
+                        <textarea name="message" id="message" rows="4" class="w-full bg-black/30 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-yellow-500/50 resize-none" placeholder="Context..."></textarea>
+                    </div>
+                
+                    <button type="submit" id="submitBtn" class="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-semibold rounded-xl px-8 py-4 transition-all flex items-center justify-center gap-2">
+                        <span id="btnText">Initiate Inquiry</span> 
+                        <i data-lucide="arrow-right" id="btnIcon" class="w-5 h-5"></i>
+                    </button>
+                    
+                    <div id="successMessage" class="hidden text-center p-4 bg-green-500/10 border border-green-500/30 rounded-xl mt-4">
+                        <p class="text-green-400 font-medium text-sm">Offer transmitted securely. Our team will contact you shortly.</p>
+                    </div>
+                </form>            
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 bg-[#030408] py-8 text-center text-xs md:text-sm text-gray-600">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; <span id="currentYear"></span> TheDevelopmentRoad.com. All rights reserved.</p>
+            <div class="flex gap-4 md:gap-6">
+                <span class="hover:text-gray-400 cursor-pointer transition-colors">Privacy Policy</span>
+                <span class="hover:text-gray-400 cursor-pointer transition-colors">Transfer Process</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Update Copyright Year dynamically
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Handle Navbar Transparency on Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                // Scrolled state
+                navbar.classList.add('bg-[#060913]/80', 'backdrop-blur-md', 'border-b', 'border-white/5', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                // Top state
+                navbar.classList.add('bg-transparent', 'py-6');
+                navbar.classList.remove('bg-[#060913]/80', 'backdrop-blur-md', 'border-b', 'border-white/5', 'py-4');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.classList.add('flex');
+                mobileMenuBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+            }
+            lucide.createIcons(); // Re-initialize icons inside the button
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+
+        // Close menu when a mobile link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (isMenuOpen) toggleMenu();
+            });
+        });
+        document.getElementById('acquisitionForm').addEventListener('submit', async function(e) {
+            e.preventDefault(); 
+
+            const form = e.target;
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+
+            // 1. تغيير حالة الزر ومحتواه بالكامل للإيحاء بالمعالجة
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+            submitBtn.innerHTML = `<span id="btnText">Encrypting & Transmitting...</span> <i data-lucide="loader" class="w-5 h-5 animate-spin"></i>`;
+            lucide.createIcons(); // تفعيل أيقونة التحميل الجديدة
+
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('/api/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    form.reset();
+                    successMessage.classList.remove('hidden');
+                    // 2. حالة النجاح
+                    submitBtn.innerHTML = `<span id="btnText">Offer Submitted</span> <i data-lucide="check" class="w-5 h-5"></i>`;
+                    submitBtn.classList.remove('hover:bg-yellow-400'); // إزالة تأثير التحويم لأنه أصبح غير فعال
+                } else {
+                    throw new Error('Transmission failed');
+                }
+            } catch (error) {
+                alert('An encrypted connection could not be established. Please try again.');
+                // 3. حالة الفشل: إعادة الزر لشكله الأصلي
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+                submitBtn.innerHTML = `<span id="btnText">Initiate Inquiry</span> <i data-lucide="arrow-right" class="w-5 h-5"></i>`;
+            }
+            
+            lucide.createIcons(); // تفعيل الأيقونة النهائية
+        });
+        
+    </script>
+    
+</body>
+</html>
