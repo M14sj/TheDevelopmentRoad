@@ -315,12 +315,6 @@
             const submitBtn = document.getElementById('submitBtn');
             const successMessage = document.getElementById('successMessage');
 
-            // 1. تغيير حالة الزر ومحتواه بالكامل للإيحاء بالمعالجة
-            submitBtn.disabled = true;
-            submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
-            submitBtn.innerHTML = `<span id="btnText">Encrypting & Transmitting...</span> <i data-lucide="loader" class="w-5 h-5 animate-spin"></i>`;
-            lucide.createIcons(); // تفعيل أيقونة التحميل الجديدة
-
             const formData = new FormData(form);
 
             try {
@@ -332,7 +326,7 @@
                 if (response.ok) {
                     form.reset();
                     successMessage.classList.remove('hidden');
-                    // 2. حالة النجاح
+                    // حالة النجاح
                     submitBtn.innerHTML = `<span id="btnText">Offer Submitted</span> <i data-lucide="check" class="w-5 h-5"></i>`;
                     submitBtn.classList.remove('hover:bg-yellow-400'); // إزالة تأثير التحويم لأنه أصبح غير فعال
                 } else {
@@ -340,7 +334,7 @@
                 }
             } catch (error) {
                 alert('An encrypted connection could not be established. Please try again.');
-                // 3. حالة الفشل: إعادة الزر لشكله الأصلي
+                // حالة الفشل: إعادة الزر لشكله الأصلي
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
                 submitBtn.innerHTML = `<span id="btnText">Initiate Inquiry</span> <i data-lucide="arrow-right" class="w-5 h-5"></i>`;
